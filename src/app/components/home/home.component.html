@@ -1,0 +1,22 @@
+<p>home works!</p>
+
+<nav>
+    <ul>
+        <li>
+            <a routerLink ="/home/childone" routerLinkActive="active">one</a>
+        </li>
+        <li>
+            <a routerLink ="/home/childtwo" routerLinkActive="active">Two</a>
+        </li>
+        <li>
+            <a routerLink ="/home/childthree" routerLinkActive= "active">Three</a>
+        </li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
+
+<input type="text"  [(ngModel)]="username"/><br><br>
+<input type="password"  [(ngModel)]="passcode"/><br><br>
+ 
+<button (click)="DisplayConsole()">Submit</button>
+<p>Check in console after Submit button</p>

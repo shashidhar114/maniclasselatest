@@ -1,0 +1,26 @@
+<p>about-us works!</p>
+<p>the id is received: {{gotId}}</p>
+<button (click)="GoToHomePage()">Click For Home Page</button>
+<hr>
+<h3>Inbulid Angular Pipes</h3>
+<b>upperCase</b>
+<div>{{"Shashidharachari"| uppercase}}</div>
+<b>Lower Case</b>
+<div>{{"SHAshi" | lowercase}}</div>
+<b>slice</b>
+<div>{{"Shashidharachari"| slice:0:10}}</div>
+<b>Percentage</b>
+<div>{{2.56781356 | percent:'6.3-4' }}</div>
+<div>{{2.45 | percent:'0.2'}}</div>
+<b>Date</b>
+<div>{{dateObj}}</div>
+<div>{{dateObj | date:"M/d/yyyy"}}</div>
+<b>Sample Hellow Pipe </b>
+
+<b>arithematic pipe </b>
+<div>Addition of "6 + 5"= {{6 | custom : "add" : 5 }}</div>
+<div> substraction of "6 - 4"= {{6 | custom : "sub" : 4 }}</div>    
+<div> multiplication of " 6 * 2" = {{6 | custom : "mul" : 2 }}</div>    
+<div> division of "6 / 5" = {{6 | custom : "div" : 5 }}</div>      
+<div>{{6 | custom : "shashi" : 5 }}</div>      
+

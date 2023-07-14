@@ -1,0 +1,19 @@
+nav ul {
+    list-style: none;
+    padding: 0px;
+ }
+ nav li {
+     display: inline-block;
+ 
+  }
+  nav li :hover{
+     background-color: grey;
+     color: white;
+  }
+  nav li a.active{
+     background-color: orange;
+  }
+  nav li a{
+     padding: 10px 20px; 
+     text-decoration: none;
+  }

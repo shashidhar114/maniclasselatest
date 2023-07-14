@@ -1,0 +1,39 @@
+nav ul {
+   list-style: none;
+   padding: 0px;
+}
+nav li {
+    display: inline-block;
+
+ }
+ nav li :hover{
+    background-color: grey;
+    color: black;
+ }
+ nav li a.active{
+    background-color: blue;
+ }
+ nav li a{
+    padding: 10px 20px; 
+    text-decoration: none;
+    border-radius: 5px;
+ }
+ table{
+   border-collapse: collapse;
+}
+tr,td,th{
+   border: 1px solid black;
+   padding: 10px;
+}
+ tbody{
+   text-align: center;
+ }
+ .bg-grey{
+   background-color: rgb(241, 235, 235);
+ }
+ .bg-red{
+   background-color: red;
+ }
+ .color-white{
+   color: white;
+ }

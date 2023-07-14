@@ -1,0 +1,78 @@
+<h2 *ngIf="true" style="text-align: center;" appToggle>Angular Project</h2>
+
+
+
+<nav>
+    <ul>
+        <li>
+            <a routerLink ="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li>
+            <a routerLink ="/contact" routerLinkActive="active">Contact US</a>
+        </li>
+        <li>
+            <a [routerLink] ="['/about', id]" routerLinkActive= "active">About US</a>
+        </li>
+        <li>
+            <a routerLink = "/parent" routerLinkActive= "active">Parent</a>
+        </li>
+        <li>
+            <a routerLink ="/firstmodule" routerLinkActive= "active">First Module</a>
+        </li>
+        <li>
+            <a routerLink ="/secondmodule" routerLinkActive= "active">Second Module</a>
+        </li>
+        <li>
+            <a routerLink ="/thirdmodule" routerLinkActive= "active">Third Module</a>
+        </li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
+
+<button appCustom sendClass ="bg-grey">Custom Directive</button>
+
+<div>Name:{{name}}</div>
+<div [innerHtml]="firstName"></div>  
+<div>Age:{{age}}</div> 
+
+<input type="text" name="firstname" [(ngModel)]="firstName"/><br><br>
+
+<input type="number" name="age" [(ngModel)]="age">
+<div class="text-danger" *ngIf="age < 18; else test">The age should be greaterthan18 </div><br>
+<!-- <div class="text-sucesses" *ngIf="age > 18">The age is valid</div><br> -->
+<ng-template #test>
+<div class="test-sucesses">the age is valid</div>
+</ng-template>
+<div [ngSwitch]="age">
+    <div *ngSwitchCase="1">the age number is one</div>
+    <div *ngSwitchCase="2">the age number is two</div>
+    <div *ngSwitchCase="3">the age number is three</div>
+    <div *ngSwitchDefault>This is default message content</div>
+</div>
+
+
+<button (click)="getFirstName()">Get First Name</button><br><br>
+
+<button (click)="changeTheName()">Change Name</button><br><br>
+
+<input type="color" name="color" placeholder="color " [(ngModel)]="color">
+{{color}}
+<!-- <div style="color: {{color}}">change the color</div> -->
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th width="150px" [ngClass]="bgClass">Name</th>
+            <th width="150px" [ngClass]="classList">Age</th>
+            <th width="150px">ID</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let user of userlist">
+            <td [ngClass]="classList">{{user.username}}</td>
+            <td [ngClass]='user.age > 18? "bg-grey color-white":"bg-red"'>{{user.age}}</td>
+            <td [ngClass]="classObject">{{user.userId}}</td>
+        </tr>
+    </tbody>
+</table>
+
